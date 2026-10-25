@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задание 5 — Калькулятор заказа</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="calc.js" defer></script>
+</head>
+
+<body>
+
+  <header id="site-header">
+    <div class="container">
+      <h1 class="site-title">Лабораторная работа 5</h1>
+    </div>
+  </header>
+
+  <main id="content" class="container">
+    <section id="calc-section">
+      <h2>Калькулятор стоимости заказа</h2>
+
+      <form id="calc-form" class="calc-form" action="#" method="get" novalidate>
+
+        <div class="field">
+          <label for="quantity">Количество товара</label>
+          <input type="text" id="quantity" name="quantity" placeholder="Например, 3"
+                 inputmode="numeric" autocomplete="off">
+          <p id="quantity-error" class="error" role="alert" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="product">Товар</label>
+          <select id="product" name="product">
+            <option value="5000">Наушники — 5 000 ₽</option>
+            <option value="20000">Монитор — 20 000 ₽</option>
+            <option value="30000">Смартфон — 30 000 ₽</option>
+            <option value="55000">Ноутбук — 55 000 ₽</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <button type="submit" id="calc-button" class="btn-submit">Рассчитать стоимость</button>
+        </div>
+
+      </form>
+
+      <p id="result" class="result" role="status" hidden></p>
+    </section>
+  </main>
+
+  <footer id="site-footer">
+    <div class="container">
+      <p>&copy; Анастасия Куликова</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
